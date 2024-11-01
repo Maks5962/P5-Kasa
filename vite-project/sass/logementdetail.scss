@@ -1,0 +1,111 @@
+$mainColor: #ff6060;
+
+.logementDetail {
+
+    width: 100%;
+
+    &__img {
+        margin-top: 50px;
+        height: 415px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 25px;
+    }
+
+    &__infos {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &__column {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &--left {
+            align-items: flex-start;
+        }
+    
+        &--right {
+            align-items: flex-end;
+        }
+       
+    }
+    
+    
+
+    &__title {
+        margin: 30px 0 0 0;
+        font-weight: 500;
+        font-size: 36px;
+        color: $mainColor;
+    }
+
+    &__location {
+        margin: 0;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+   
+    &__tags {
+        margin: 20px 0 0 0;
+        display: flex;
+        column-gap: 10px;
+        row-gap: 10px;
+        flex-wrap: wrap;
+
+        &--item {
+            padding: 0 40px;
+            background-color: $mainColor;
+            height: 25px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        &--title {
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
+        }
+    }
+
+    
+
+    &__profil {
+        display: flex;
+        margin: 24px 0 0 0;
+        gap: 10px;
+        align-items: center;
+
+        &--name {
+            color:$mainColor;
+            font-size: 18px;
+            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+        }
+
+        &--photo {
+            height: 64px;
+            width: 64px;
+            border-radius: 64px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__collapse {
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+
+}
