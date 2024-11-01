@@ -6,11 +6,13 @@ import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
     return (
-        <div>
+        <>
+        <div className='maxWidth'>
             <Header />
             <main><Outlet/></main>
-            <Footer />
         </div>
+        <Footer />
+        </>
     );
 };
 

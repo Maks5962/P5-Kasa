@@ -1,0 +1,53 @@
+$backgroundContainerCards: #F6F6F6;
+
+.cardContainer {
+    margin: 43px 0 0 0;
+    border-radius: 25px;
+    background-color: $backgroundContainerCards;
+    width: 100%;
+
+    .grid {
+        display: grid;
+        padding: 50px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+
+        a {
+            text-decoration: none;
+        }
+    
+        &__card {
+            border-radius: 10px;
+            height: 340px;
+            width: 340px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        
+            img {
+                position: absolute;
+                border-radius: 10px;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+                z-index: 0;
+            }
+
+            h2 {
+                position: relative;
+                z-index: 1;
+                padding: 0 20px 20px 20px;
+            }
+        }
+    }
+}
+
+.cardTitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFF;
+    text-decoration: none;
+    text-decoration: none;
+}
