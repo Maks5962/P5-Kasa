@@ -2,47 +2,45 @@ $backgroundCollapse: #ff6060;
 $backgroundCollapseContent: #f6f6f6;
 
 .collapse {
-    background-color: $backgroundCollapse;
-    border-radius: 10px;
     width: 100%;
     max-width: 582px;
+}
 
-    &__title{
+.collapse__title {
+    background-color: $backgroundCollapse;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+
+    &--text {
+        color: white;
+        padding: 10px;
+        padding: 10px 20px 10px 10px;
         font-size: 18px;
         font-weight: 700;
-        cursor: pointer;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        list-style: none;
-        padding: 10px 20px 10px 10px; /* Espace pour l'icône */
+        justify-content: space-between;        
         position: relative;
-        color: white;
-    }
 
-    &__title::after {
-        content: '';
-        position: absolute;
-        right: 0;
-        margin: 0 20px 0 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 24px;
-        height: 16px;;
-        background-image: url('../src/img/vector-collapse.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        transition: transform 0.3s ease;
-    }
-
-    &__content {
-        background-color: $backgroundCollapseContent;
-        border-radius: 0 0 5px 5px;
-        padding: 20px;
-        line-height: 25px;
     }
 }
 
-details[open] .collapse__title::after {
-    transform: translateY(-50%) rotate(180deg); /* Rotation de l'icône lorsque le contenu est ouvert */
+.collapse__content {
+    background-color: $backgroundCollapseContent;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.collapse__inner-content {
+    padding: 20px;
+}
+
+.collapse__icon {
+    transition: transform 0.3s ease; /* Transition pour une rotation fluide */
+}
+
+.collapse__icon.rotate {
+    transform: rotate(-180deg); /* Rotation de 180 degrés lorsque l'icône est active */
 }

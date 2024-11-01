@@ -1,5 +1,5 @@
 import React from 'react';
-import Banner from '/components/banner'
+import Banner from '/components/banner';
 
 const About = () => {
     return (
@@ -7,7 +7,8 @@ const About = () => {
             <Banner showTitle={false} 
                 imageSrc="/src/img/image-source-2.jpg" 
                 imageAlt="Payages d'une forêt de pins devant les montagnes enneigées."
-                overlayOpacity={0.3} />           
+                overlayOpacity={0.3} />    
+      
         </>
     );
 };
