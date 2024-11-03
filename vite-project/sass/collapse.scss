@@ -1,9 +1,8 @@
 $backgroundCollapse: #ff6060;
-$backgroundCollapseContent: #f6f6f6;
+$backgroundCollapseContent: rgba(246, 246, 246, 0.45);
 
 .collapse {
-    width: 100%;
-    max-width: 582px;
+    width: 100%; 
 }
 
 .collapse__title {
@@ -12,6 +11,7 @@ $backgroundCollapseContent: #f6f6f6;
     border: none;
     cursor: pointer;
     width: 100%;
+    position: relative;
 
     &--text {
         color: white;
@@ -21,14 +21,14 @@ $backgroundCollapseContent: #f6f6f6;
         font-weight: 700;
         display: flex;
         align-items: center;
-        justify-content: space-between;        
-        position: relative;
-
+        justify-content: space-between; 
     }
 }
 
 .collapse__content {
+    margin-top: -10px;
     background-color: $backgroundCollapseContent;
+    border-radius: 0 0 5px 5px;
     overflow: hidden;
     transition: height 0.3s ease;
 }
