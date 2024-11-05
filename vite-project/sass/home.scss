@@ -7,6 +7,8 @@ $backgroundContainerCards: #F6F6F6;
     width: 100%;
 
     .grid {
+        height: 100%;
+        width: 100%;
         display: grid;
         padding: 50px;
         grid-template-columns: repeat(3, 1fr);
@@ -18,8 +20,8 @@ $backgroundContainerCards: #F6F6F6;
     
         &__card {
             border-radius: 10px;
+            width: 100%;
             height: 340px;
-            width: 340px;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -50,4 +52,21 @@ $backgroundContainerCards: #F6F6F6;
     color: #FFF;
     text-decoration: none;
     text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .cardContainer {
+        background-color: transparent;
+
+        .grid {
+            grid-template-columns: repeat(1, 1fr);
+            padding: 0;
+            gap: 20px;
+
+            &__card {
+                height: 255px;
+            }
+        }
+    }
 }

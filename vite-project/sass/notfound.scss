@@ -25,3 +25,25 @@ $colorNotFound: #FF6060;
 
     }
 }
+
+@media screen and (max-width: 768px) {
+
+    .notFound {
+
+        &__title {
+            font-size: 96px;
+        }
+
+        &__p {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        &__link {
+            font-size: 14px;
+        }
+
+    }
+
+
+}

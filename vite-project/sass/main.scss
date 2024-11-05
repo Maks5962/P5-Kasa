@@ -13,6 +13,7 @@ html, body {
     font-family: 'Montserrat';
     margin: 0;
     height: 100%;
+    width: 100%;
 }
 
 #root {
@@ -20,6 +21,7 @@ html, body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    width: 100%;
 
 }
 
@@ -42,4 +44,15 @@ main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+
+    html, body {
+        min-width: 375px;
+    }
+
+    .maxWidth {
+        padding: 0 20px;
+    }
 }

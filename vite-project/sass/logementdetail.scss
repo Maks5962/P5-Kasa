@@ -110,3 +110,72 @@ $mainColor: #ff6060;
 
 
 }
+
+
+@media screen and (max-width: 768px) {
+
+    .logementDetail {
+        &__img {
+            margin-top: 27px;
+            height: 255px;
+            border-radius: 10px;
+        }
+
+        &__infos {
+            flex-direction: column;
+        }
+
+        &__title {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+
+        &__location {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+
+        &__tags {
+            margin-top: 10px;
+    
+            &--item {
+                padding: 0 26px;
+                height: 18px;
+            }
+        
+            &--title {
+                font-size: 10px;
+            }
+        }
+
+        &__column--right {
+            margin-top: 16px;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+
+        &__profil {
+            margin: 0;
+            
+            &--name {
+            font-size: 12px;
+            }
+
+            &--photo {
+                height: 32px;
+                width: 32px;
+            }
+        }
+        
+        &__collapse {
+            margin-top: 13px;
+            flex-direction: column;
+            gap: 20px;
+        }
+    
+    }
+
+
+
+}

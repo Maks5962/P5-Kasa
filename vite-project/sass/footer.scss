@@ -20,3 +20,24 @@ footer {
         font-size: 24px;
     }
 }
+
+
+@media screen and (max-width: 768px) {
+
+    footer {
+        margin-top: 27px;
+
+        img {
+            margin: 68px 0 0 0;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 12px;
+            width: 122px;;
+        }
+
+    }
+        
+}

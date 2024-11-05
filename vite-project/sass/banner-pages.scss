@@ -42,11 +42,27 @@ $darkenBanner: rgba(0, 0, 0, 0.6);
         justify-content: center;
         align-items: center;
         height: 100%;
+        padding: 16px;
 
         &--font {
             font-size: 48px;
             color: #FFF;
             font-weight: 700;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .banner {
+        margin-top: 27px;
+        height: 111px;
+        border-radius: 10px;;
+        
+        &__title {
+            &--font {
+                font-size: 24px;
+            }
         }
     }
 }

@@ -44,3 +44,23 @@ $backgroundCollapseContent: rgba(246, 246, 246, 0.45);
 .collapse__icon.rotate {
     transform: rotate(-180deg); /* Rotation de 180 degrés lorsque l'icône est active */
 }
+
+@media screen and (max-width: 768px) {
+
+    .collapse__title {
+        border-radius: 5px;
+        height: 30px;
+
+        &--text {
+            font-size: 13px;
+            padding: 10px;;
+        }
+       
+    }
+
+    .collapse__icon {
+        width: 16px;;
+    }
+
+
+}

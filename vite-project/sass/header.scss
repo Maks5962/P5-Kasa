@@ -16,11 +16,14 @@ header {
 
     .navbar {
         font-size: 24px;
+        display: flex;
+        gap: 57px;
         
         &__link {
             color: $couleurLiens;
             text-decoration: none;
-            margin: 0 0 0 57px;
+            
+            gap: 57px;
             
             &:hover {
                 text-decoration: underline;
@@ -33,3 +36,22 @@ header {
     }
 }
 
+@media screen and (max-width: 768px) {
+
+    header {
+        margin-top: 20px;
+
+        .logo {
+            &__image {
+                width: 145px;
+            }
+        }
+
+        .navbar {
+            font-size: 12px;
+            gap: 26px;
+            text-transform: uppercase;
+        }
+    }
+    
+}
