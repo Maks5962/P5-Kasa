@@ -58,6 +58,14 @@ $darkenBanner: rgba(0, 0, 0, 0.6);
         margin-top: 27px;
         height: 111px;
         border-radius: 10px;;
+
+        &__img {
+            border-radius: 10px;
+        }
+
+        &__overlay {
+            border-radius: 10px;;
+        }
         
         &__title {
             &--font {
