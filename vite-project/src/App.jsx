@@ -12,7 +12,7 @@ const App = () => {
 
     return (
         <Router>
-            <LogementProvider>
+            <LogementProvider> {/* Ajout du provider (hook personnalisé) en super parent */}
                 <Routes>
                 
                     <Route element={<Layout />}>

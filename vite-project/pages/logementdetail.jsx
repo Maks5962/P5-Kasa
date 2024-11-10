@@ -3,6 +3,7 @@ import { useLogements } from '../hooks/useLogements';
 import { useParams, Navigate } from 'react-router-dom';
 import Collapse from '../components/collapse';
 import RatingHost from '../components/ratinghost';
+import Carousel from '../components/carousel';
 
 const LogementDetail = () => {
 
@@ -10,7 +11,7 @@ const LogementDetail = () => {
     const { id } = useParams(); // Récupère l'id de l'url
 
     if(loading) {
-        return <p>Chargement en cours</p>
+        return <p>Chargement en cours</p> // Dans le cas d'une connexion lente
     }
     
     if(error) {
@@ -26,12 +27,13 @@ const LogementDetail = () => {
     }
 
 
-    const fullname = logement.host['name'].split(' ');
+    const fullname = logement.host['name'].split(' '); // traitement du nom de l'hote pour le retour afficher chaque partie du nom individuellement
 
     
     return (
+        <>
         <div className='logementDetail'>
-            <img src={logement.cover} alt={logement.title} className="logementDetail__img"></img>
+            <Carousel pictures={logement.pictures}/>
 
             <div className='logementDetail__infos'>
                 <div className='logementDetail__column logementDetail__column--left'>                
@@ -53,7 +55,7 @@ const LogementDetail = () => {
                         <p><img className='logementDetail__profil--photo' src={logement.host['picture']} alt={"Photo de profil de " + logement.host['name']}></img></p>
                     </div>
 
-                    <RatingHost rating={logement.rating} />
+                    <RatingHost rating={logement.rating} /> { /* Composant pour afficher le score sous forme d'étoile */ }
                     
                 </div>
             </div>
@@ -74,6 +76,9 @@ const LogementDetail = () => {
             </div>
     
         </div>
+
+        
+        </>
         
     );
 };

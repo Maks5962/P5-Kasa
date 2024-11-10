@@ -4,10 +4,10 @@ import { useLogements } from '../hooks/useLogements';
 
 const Logements = () => {
 
-    const { logements, error } = useLogements();
+    const { logements, error } = useLogements(); // Appel du hook personnalisé 
 
     if(error) {
-        return { error }
+        return { error } // Retourne l'erreur dans le cas échéant non visible par l'utilisateur
     }
 
     // Rendu du composant

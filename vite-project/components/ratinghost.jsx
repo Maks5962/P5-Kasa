@@ -5,9 +5,10 @@ const RatingHost = ({ rating }) => {
 
     return (
         <div className="ratingHost">
-            {[...Array(totalStars)].map((_, index) => (
+            {/* Création d'un tableau vide de 5 éléments */ }
+            {[...Array(totalStars)].map((_, index) => ( 
                 <img key={index + '-' + rating}
-                src={index < rating ? '../src/img/vector-star.svg' : '../src/img/vector-badstar.svg'}
+                src={index < rating ? '../src/img/vector-star.svg' : '../src/img/vector-badstar.svg' /* Si index < Note (rating) j'affiche l'étoile pleine */ }
                     alt={'Note globale = ' + rating + '/5'}></img>
             ))}
         </div>

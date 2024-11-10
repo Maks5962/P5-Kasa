@@ -8,6 +8,7 @@
 @import url('/sass/logementdetail.scss');
 @import url('/sass/ratinghost.scss');
 @import url('/sass/about.scss');
+@import url('/sass/carousel.scss');
 
 html, body {
     font-family: 'Montserrat';
@@ -26,7 +27,8 @@ html, body {
 }
 
 .maxWidth {
-    max-width: 1240px;
+    max-width: 1440px;
+    padding: 0 100px;
     margin: 0 auto;
     height: 100%;
     width: 100%;
@@ -54,5 +56,12 @@ main {
 
     .maxWidth {
         padding: 0 20px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .maxWidth {
+        padding: 0 50px;
     }
 }

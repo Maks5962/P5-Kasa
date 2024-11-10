@@ -9,7 +9,7 @@ const Layout = () => {
         <>
         <div className='maxWidth'>
             <Header />
-            <main><Outlet/></main>
+            <main><Outlet/></main> {/* Affichage de la page dans le layout */}
         </div>
         <Footer />
         </>
