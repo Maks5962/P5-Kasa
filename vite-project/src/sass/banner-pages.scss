@@ -1,0 +1,76 @@
+$darkenBanner: rgba(0, 0, 0, 0.6);
+
+.banner {
+    position: relative;
+    margin: 50px 0 0 0;
+    border-radius: 25px;
+    height: 223px;
+    width: 100%;
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 25px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: 0;
+    }
+
+    // Superposition sombre avec pseudo-élément
+    &__overlay {
+        content: '';
+        position: absolute;
+        border-radius: 25px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $darkenBanner;
+        z-index: 1;
+    }
+
+    // Contenu de la bannière, au-dessus de la superposition
+    &__title {
+        position: relative;
+        z-index: 2; // S’assure que le contenu est au-dessus de la superposition
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 16px;
+
+        &--font {
+            font-size: 48px;
+            color: #FFF;
+            font-weight: 700;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .banner {
+        margin-top: 27px;
+        height: 111px;
+        border-radius: 10px;;
+
+        &__img {
+            border-radius: 10px;
+        }
+
+        &__overlay {
+            border-radius: 10px;;
+        }
+        
+        &__title {
+            &--font {
+                font-size: 24px;
+            }
+        }
+    }
+}

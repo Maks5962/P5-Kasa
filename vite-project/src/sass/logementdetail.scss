@@ -1,0 +1,167 @@
+$mainColor: #ff6060;
+
+.logementDetail {
+
+    width: 100%;
+
+    &__infos {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &__column {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &--left {
+            align-items: flex-start;
+        }
+    
+        &--right {
+            align-items: flex-end;
+        }
+       
+    }
+    
+    
+
+    &__title {
+        margin: 30px 0 0 0;
+        font-weight: 500;
+        font-size: 36px;
+        color: $mainColor;
+    }
+
+    &__location {
+        margin: 0;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+   
+    &__tags {
+        margin: 20px 0 0 0;
+        display: flex;
+        column-gap: 10px;
+        row-gap: 10px;
+        flex-wrap: wrap;
+
+        &--item {
+            padding: 0 40px;
+            background-color: $mainColor;
+            height: 25px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        &--title {
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
+        }
+    }
+
+    
+
+    &__profil {
+        display: flex;
+        margin: 24px 0 0 0;
+        gap: 10px;
+        align-items: center;
+
+        &--name {
+            color:$mainColor;
+            font-size: 18px;
+            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+        }
+
+        &--photo {
+            height: 64px;
+            width: 64px;
+            border-radius: 64px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__collapse {
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 76px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .logementDetail {
+
+        &__infos {
+            flex-direction: column;
+        }
+
+        &__title {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+
+        &__location {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+
+        &__tags {
+            margin-top: 10px;
+    
+            &--item {
+                padding: 0 26px;
+                height: 18px;
+            }
+        
+            &--title {
+                font-size: 10px;
+            }
+        }
+
+        &__column--right {
+            margin-top: 16px;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+
+        &__profil {
+            margin: 0;
+            
+            &--name {
+            font-size: 12px;
+            }
+
+            &--photo {
+                height: 32px;
+                width: 32px;
+            }
+        }
+        
+        &__collapse {
+            margin-top: 13px;
+            flex-direction: column;
+            gap: 20px;
+        }
+    
+    }
+
+
+
+}
